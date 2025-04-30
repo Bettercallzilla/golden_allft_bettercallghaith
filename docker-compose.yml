@@ -1,0 +1,11 @@
+services:
+  instagram-dm-api:
+    build: .
+    restart: always
+    ports:
+      - "3013:3013"
+    volumes:
+      - sessions_data:/data/sessions
+volumes:
+  sessions_data:
+    driver: local
